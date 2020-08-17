@@ -1,0 +1,324 @@
+* {
+  margin: 0px;
+  padding: 0;
+  font-family: "Asul", sans-serif;
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+.nav {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 40px;
+  background-color: #33321C;
+  color: #DF9A3c;
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  z-index: 3;
+}
+@media (max-width: 480px) {
+  .nav {
+    margin-bottom: 0px;
+  }
+}
+.nav p {
+  width: 60%;
+  font-size: 20px;
+  text-align: center;
+  letter-spacing: 6px;
+}
+@media (max-width: 1041px) {
+  .nav p {
+    width: 30%;
+  }
+}
+@media (max-width: 480px) {
+  .nav p {
+    width: 50%;
+  }
+}
+@media (max-width: 370px) {
+  .nav p {
+    width: 60%;
+  }
+}
+.nav .nav_active {
+  width: 70%;
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 10%;
+  cursor: pointer;
+}
+@media (max-width: 1041px) {
+  .nav .nav_active {
+    width: 30%;
+    margin-right: 0%;
+  }
+}
+@media (max-width: 760px) {
+  .nav .nav_active {
+    width: 40%;
+    position: absolute;
+    right: 0px;
+    height: 100vh;
+    top: 7vh;
+    background-color: #33321C;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in;
+  }
+}
+.nav .nav_active li {
+  margin-right: 50px;
+  list-style: none;
+  transition: 0.1s all;
+}
+@media (max-width: 760px) {
+  .nav .nav_active li {
+    opacity: 0;
+  }
+}
+.nav .nav_active li a {
+  text-decoration: none;
+  color: inherit;
+}
+.nav .nav_active li:hover {
+  transform: translate(4px, -4px);
+}
+.nav .active {
+  transform: translateX(-1%);
+}
+.nav .nav_burguer {
+  display: none;
+  position: fixed;
+  right: 30px;
+  top: 8px;
+}
+.nav .nav_burguer div {
+  width: 25px;
+  height: 5px;
+  background-color: #DF9A3c;
+  margin: 5px;
+  transition: transform 0.2s ease-in;
+}
+@media (max-width: 760px) {
+  .nav .nav_burguer {
+    display: block;
+    cursor: pointer;
+  }
+}
+.nav .toggle .line1 {
+  transform: rotate(-45deg) translate(-8px, 6px);
+}
+.nav .toggle .line2 {
+  opacity: 0;
+}
+.nav .toggle .line3 {
+  transform: rotate(45deg) translate(-8px, -6px);
+}
+
+.nav_menu {
+  margin-bottom: 30px;
+  padding-top: 55px;
+  width: 100%;
+  text-align: center;
+}
+.nav_menu h4 {
+  margin-top: 40px;
+  font-size: 40px;
+  color: #DF9A3C;
+}
+
+.menu {
+  width: 100%;
+}
+.menu .menu_container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  position: relative;
+}
+.menu .menu_container .menu_bg .menu_img {
+  width: 450px;
+  height: 300px;
+  margin: 20px;
+  box-shadow: 0px 0px 10px gray;
+  border-radius: 15px;
+  position: relative;
+}
+@media (max-width: 480px) {
+  .menu .menu_container .menu_bg .menu_img {
+    width: 280px;
+    height: 200px;
+  }
+}
+.menu .menu_container .menu_bg .menu_img p {
+  padding: 10px;
+  width: 80%;
+  text-align: center;
+  color: whitesmoke;
+  border-radius: 15px;
+  border: solid 2px #DF9A3C;
+  position: absolute;
+  bottom: 10px;
+  left: 7%;
+  transition: 0.5s all;
+}
+.menu .menu_container .menu_bg .menu_img p label {
+  color: transparent;
+  font-size: 20px;
+  position: absolute;
+  right: 10px;
+  bottom: 8px;
+}
+.menu .menu_container .menu_bg .menu_img p:hover {
+  background-color: #DF9A3C;
+  color: #33321C;
+  transform: scale(1.1);
+}
+.menu .menu_container .menu_bg .menu_img p:hover label {
+  color: white;
+}
+.menu .menu_container .menu_bg .menu_img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+#footer {
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding-bottom: 20px;
+  position: relative;
+  background-color: #33321cb8;
+  color: white;
+}
+#footer .footer_bg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  object-fit: cover;
+  z-index: -1;
+  filter: opacity(0.4);
+}
+#footer .footer {
+  display: flex;
+}
+@media (max-width: 480px) {
+  #footer .footer {
+    flex-direction: column;
+  }
+}
+#footer .footer .footer_contactUs {
+  color: #DF9A3C;
+  width: 50%;
+  display: flex;
+  position: relative;
+  z-index: 2;
+}
+@media (max-width: 480px) {
+  #footer .footer .footer_contactUs {
+    margin-top: 20px;
+    width: 100%;
+    text-align: center;
+  }
+}
+#footer .footer .footer_contactUs .contactUs_content {
+  width: 70%;
+  margin: auto;
+  padding-left: 40px;
+}
+@media (max-width: 480px) {
+  #footer .footer .footer_contactUs .contactUs_content {
+    padding: 0;
+  }
+}
+#footer .footer .footer_contactUs .contactUs_content .contactUs {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+#footer .footer .footer_contactUs .contactUs_content .contactUs_text ul {
+  list-style: none;
+}
+#footer .footer .footer_contactUs .contactUs_content .contactUs_text ul li {
+  margin: 10px 0;
+}
+#footer .footer .footer_followUs {
+  width: 50%;
+}
+@media (max-width: 480px) {
+  #footer .footer .footer_followUs {
+    width: 100%;
+    margin: 0;
+  }
+}
+#footer .footer .footer_followUs .followUs_content {
+  width: 80%;
+  margin: auto;
+}
+@media (max-width: 480px) {
+  #footer .footer .footer_followUs .followUs_content {
+    width: 100%;
+    margin: 0px;
+    display: flex;
+    flex-direction: column-reverse;
+  }
+}
+@media (max-width: 480px) {
+  #footer .footer .footer_followUs .followUs_content .followUs_socialReds {
+    margin-top: 20px;
+    text-align: center;
+  }
+}
+#footer .footer .footer_followUs .followUs_content .followUs_socialReds label {
+  color: #DF9A3C;
+  margin: 0px 20px;
+  font-size: 20px;
+}
+@media (max-width: 1041px) {
+  #footer .footer .footer_followUs .followUs_content .followUs_socialReds label {
+    margin: 0px;
+  }
+}
+#footer .footer .footer_followUs .followUs_content .followUs_socialReds i {
+  margin: 10px;
+  font-size: 20px;
+  cursor: pointer;
+}
+#footer .footer .footer_followUs .followUs_content .followUs_socialReds i:hover {
+  transition: 0.4s all;
+  color: #DF9A3C;
+}
+#footer .footer .footer_followUs .followUs_content .followUs_map {
+  width: 100%;
+  height: 100%;
+}
+#footer .footer .footer_followUs .followUs_content .followUs_map img {
+  z-index: 5;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+#footer .footer .footer_followUs .followUs_content .followUs_map img:hover {
+  cursor: grab;
+}
